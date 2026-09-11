@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Western Iowa Surf | College Player Profiles</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">
+      <img class="brand-logo"
+        src="https://westerniowasurf.com/wp-content/uploads/2022/02/SURF-WAVE-BLACK-SQUARE-300x300-1-150x150.png"
+        alt="Western Iowa Surf">
+      <div>
+        <div class="brand-name">WESTERN IOWA SURF</div>
+        <div class="brand-sub">COLLEGE PLAYER PROFILES</div>
+      </div>
+    </div>
+
+    <div class="eyebrow">Best of the Best • Player Pathway</div>
+    <h1>COLLEGE <span>PLAYER</span><br>PROFILES</h1>
+    <div class="hero-copy">
+      A recruiting resource for college coaches to quickly evaluate Western Iowa Surf players,
+      academics, film, playing information and contact details.
+    </div>
+    <div class="hero-tagline">PLAY . <span>DEVELOP</span> . THRIVE</div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="controls">
+    <input id="search" class="control" type="search" placeholder="Search by player, school, team...">
+    <select id="year" class="control">
+      <option value="">All Graduation Years</option>
+    </select>
+    <select id="position" class="control">
+      <option value="">All Positions</option>
+    </select>
+    <button class="btn btn-secondary" onclick="clearFilters()">Reset</button>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Recruiting Directory</div>
+        <h2 class="section-title">WIA SURF <span>PLAYERS</span></h2>
+      </div>
+      <div id="results" class="results"></div>
+    </div>
+
+    <div id="playerGrid" class="grid"></div>
+    <div id="empty" class="empty">No players match your search.</div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">WESTERN IOWA <span>SURF</span></div>
+    <div class="footer-note">
+      College coaches: use the player profiles above to review academics, team information,
+      film and direct contact information.
+    </div>
+  </div>
+</footer>
+
+<div id="modal" class="modal" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-head">
+      <div class="modal-head-left">
+        <div id="modalAvatarWrap"></div>
+        <div>
+          <div id="modalName" class="modal-name"></div>
+          <div id="modalMeta" class="modal-meta"></div>
+        </div>
+      </div>
+      <button class="close" onclick="hideModal()">×</button>
+    </div>
+    <div id="modalContent" class="modal-content"></div>
+  </div>
+</div>
+
+<script src="js/players.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
