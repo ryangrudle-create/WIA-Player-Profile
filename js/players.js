@@ -76,7 +76,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0973.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -110,7 +110,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "images/IMG_0962.jpeg",
+    image: "images/IMG_0963.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -144,7 +144,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0967.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -161,7 +161,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0970.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -178,7 +178,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0968.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -212,7 +212,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "images/IMG_063.jpeg",
+    image: "images/IMG_064.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -246,7 +246,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0969.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -263,7 +263,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0961.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -280,7 +280,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "images/IMG_0961.jpeg",
+    image: "images/IMG_0962.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -297,7 +297,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0974.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -365,7 +365,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0972.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -382,7 +382,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0971.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -416,7 +416,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0975.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -433,7 +433,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0965.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
