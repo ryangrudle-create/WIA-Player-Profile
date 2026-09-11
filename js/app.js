@@ -3,6 +3,7 @@ const grid = document.getElementById("playerGrid");
 const search = document.getElementById("search");
 const year = document.getElementById("year");
 const position = document.getElementById("position");
+const sortSelect = document.getElementById("sort");
 const results = document.getElementById("results");
 const empty = document.getElementById("empty");
 
@@ -31,31 +32,69 @@ function render(){
            (!pos || p.position === pos);
   });
 
-  grid.innerHTML = filtered.map((p,i)=>`
-    <article class="card">
-      <div class="jersey">${p.jersey ? "#" + p.jersey : ""}</div>
-      <div class="card-top">
-        ${
-          p.image
-          ? `<img class="avatar" src="${p.image}" alt="${p.name}">`
-          : `<div class="avatar-fallback">${initials(p.name)}</div>`
-        }
-        <div class="card-top-text">
-          <div class="class">CLASS OF ${p.gradYear}</div>
-          <div class="name">${p.name}</div>
-          <div class="position">${p.position} • ${p.team}</div>
-        </div>
+  const groups = {};
+  filtered.forEach(p=>{
+    if(!groups[p.team]) groups[p.team] = [];
+    groups[p.team].push(p);
+  });
+  const teamNames = Object.keys(groups).sort();
+
+  const sortBy = sortSelect.value;
+  teamNames.forEach(team=>{
+    groups[team].sort((a,b)=>{
+      if(sortBy === "name") return a.name.localeCompare(b.name);
+      const aNum = parseInt(a.jersey, 10);
+      const bNum = parseInt(b.jersey, 10);
+      const aVal = isNaN(aNum) ? Infinity : aNum;
+      const bVal = isNaN(bNum) ? Infinity : bNum;
+      return aVal - bVal;
+    });
+  });
+  teamNames.forEach(team=>{
+    groups[team].sort((a,b)=>{
+      const numA = parseInt(a.jersey, 10);
+      const numB = parseInt(b.jersey, 10);
+      const validA = !isNaN(numA);
+      const validB = !isNaN(numB);
+      if(validA && validB) return numA - numB;
+      if(validA) return -1;
+      if(validB) return 1;
+      return 0;
+    });
+  });
+
+  grid.innerHTML = teamNames.map(team=>`
+    <div class="team-group">
+      <div class="team-group-title">${team} <span class="team-group-count">(${groups[team].length})</span></div>
+      <div class="grid">
+        ${groups[team].map(p=>`
+          <article class="card">
+            <div class="jersey">${p.jersey ? "#" + p.jersey : ""}</div>
+            <div class="card-top">
+              ${
+                p.image
+                ? `<img class="avatar" src="${p.image}" alt="${p.name}">`
+                : `<div class="avatar-fallback">${initials(p.name)}</div>`
+              }
+              <div class="card-top-text">
+                <div class="class">CLASS OF ${p.gradYear}</div>
+                <div class="name">${p.name}</div>
+                <div class="position">${p.position} • ${p.team}</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="info-row"><span class="label">Jersey</span><span class="value">#${p.jersey || "—"}</span></div>
+              <div class="info-row"><span class="label">School</span><span class="value">${p.school || "—"}</span></div>
+              <div class="info-row"><span class="label">Academic Interest</span><span class="value">${p.major || "—"}</span></div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="showProfile(${players.indexOf(p)})">View Profile</button>
+              <a class="btn btn-secondary" href="mailto:${p.coachEmail}?subject=Recruiting Inquiry - ${encodeURIComponent(p.name)}">Contact Coach</a>
+            </div>
+          </article>
+        `).join("")}
       </div>
-      <div class="card-body">
-        <div class="info-row"><span class="label">Jersey</span><span class="value">#${p.jersey || "—"}</span></div>
-        <div class="info-row"><span class="label">School</span><span class="value">${p.school || "—"}</span></div>
-        <div class="info-row"><span class="label">Academic Interest</span><span class="value">${p.major || "—"}</span></div>
-      </div>
-      <div class="card-actions">
-        <button class="btn btn-primary" onclick="showProfile(${players.indexOf(p)})">View Profile</button>
-        <a class="btn btn-secondary" href="mailto:${p.coachEmail}?subject=Recruiting Inquiry - ${encodeURIComponent(p.name)}">Contact Coach</a>
-      </div>
-    </article>
+    </div>
   `).join("");
 
   results.textContent = `${filtered.length} player${filtered.length===1?"":"s"}`;
@@ -138,12 +177,14 @@ function clearFilters(){
   search.value = "";
   year.value = "";
   position.value = "";
+  sortSelect.value = "jersey";
   render();
 }
 
 search.addEventListener("input",render);
 year.addEventListener("change",render);
 position.addEventListener("change",render);
+sortSelect.addEventListener("change",render);
 
 initFilters();
 render();
