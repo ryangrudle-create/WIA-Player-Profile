@@ -59,7 +59,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0956.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -314,7 +314,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0955.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -348,7 +348,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0957.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
@@ -399,7 +399,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "",
+    image: "images/IMG_0958.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
