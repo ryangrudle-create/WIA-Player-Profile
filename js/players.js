@@ -212,7 +212,7 @@ const players = [
     coach: "Ryan Grudle",
     coachEmail: "rgrudle@westerniowasurf.com",
     film: "",
-    image: "images/IMG_064.jpeg",
+    image: "images/IMG_0964.jpeg",
     bio: "Add player bio here — playing style, strengths, leadership, development focus, and goals."
   },
   {
